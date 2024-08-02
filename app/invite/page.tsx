@@ -3,6 +3,7 @@
 
 import { useState } from 'react';
 import axios from 'axios';
+import Image from 'next/image'
 
 const Invite = () => {
   const [input, setInput] = useState('');
@@ -45,11 +46,12 @@ const Invite = () => {
         <div className="flex max-w-5xl bg-white rounded shadow-md">
           {/* Image Container */}
           <div className="relative w-1/2 p-6">
-            <img
+            <Image
               src="/static/ga_tech_coursework.png" // Path to the image in the public/static directory
+              width={800}
+              height={800}
               alt="Description of the image"
               className="w-full h-auto object-cover rounded"
-              style={{ maxHeight: '800px' }} // Adjust the height as needed
             />
             {/* Caption Below the Image */}
             <div className="text-center mt-2">
@@ -61,10 +63,10 @@ const Invite = () => {
           {/* Form Container */}
           <div className="flex-1 p-8">
             <h2 className="text-xl text-justify font-semibold text-gray-800 mb-4">
-              To view my private GitHub repositories containing completed Georgia Tech Master of Science in Computer Science course work, enter your GitHub username or email address along with the specific passphrase I have shared with you. You should then receive an email invitation to join "Eli-Jensen-Org."
+              To view my private GitHub repositories containing completed Georgia Tech Master of Science in Computer Science course work, enter your GitHub username or email address along with the specific passphrase I have shared with you. You should then receive an email invitation to join &quot;Eli-Jensen-Org.&quot;
             </h2>
             <h2 className="text-base text-justify font-semibold text-gray-800 mb-8">
-              Do not request access if you are a current student or intend to apply to Georgia Tech's Master of Science in Computer Science program.
+              Do not request access if you are a current student or intend to apply to Georgia Tech&apos;s Master of Science in Computer Science program.
             </h2>
             <form onSubmit={handleSubmit} className="space-y-4">
               <input
