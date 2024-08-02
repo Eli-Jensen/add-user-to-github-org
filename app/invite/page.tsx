@@ -47,11 +47,14 @@ const Invite = () => {
           {/* Image Container */}
           <div className="relative w-1/2 p-6">
             <Image
-              src="/static/ga_tech_coursework.png" // Path to the image in the public/static directory
-              width={800}
-              height={800}
+              src="/static/ga_tech_coursework.png"
               alt="Description of the image"
-              className="w-full h-auto object-cover rounded"
+              className="w-full h-auto object-cover rounded-lg"
+              style={{ maxHeight: '600px' }}
+              priority // Add priority for LCP
+              layout="responsive"
+              width={800}
+              height={600}
             />
             {/* Caption Below the Image */}
             <div className="text-center mt-2">
@@ -75,6 +78,7 @@ const Invite = () => {
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Enter email or GitHub username"
                 className="w-full px-4 py-2 text-gray-700 bg-gray-200 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+                autoComplete="username" // Auto-complete for usernames or emails
                 required
               />
               <input
@@ -83,6 +87,7 @@ const Invite = () => {
                 onChange={(e) => setPassphrase(e.target.value)}
                 placeholder="Enter passphrase"
                 className="w-full px-4 py-2 text-gray-700 bg-gray-200 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+                autoComplete="current-password" // Auto-complete for current password
                 required
               />
               <button
