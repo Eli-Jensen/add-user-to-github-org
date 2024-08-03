@@ -11,14 +11,13 @@ const Invite = () => {
   const [message, setMessage] = useState<{ text: string, type: 'success' | 'error' } | null>(null);
   const [animate, setAnimate] = useState(false);
   
-  // Get the passphrase from the environment variable
-  const secretPassphrase = process.env.NEXT_PUBLIC_PASSPHRASE;
+  const passphrases = (process.env.NEXT_PUBLIC_PASSPHRASES || '').split(',');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     // Validate the passphrase
-    if (passphrase !== secretPassphrase) {
+    if (!passphrases.includes(passphrase)) {
       setMessage({ text: 'Invalid passphrase.', type: 'error' });
       triggerAnimations();
       return;
@@ -66,7 +65,7 @@ const Invite = () => {
           {/* Form Container */}
           <div className="flex-1 p-8">
             <h2 className="text-xl text-justify font-semibold text-gray-800 mb-4">
-              To view my private GitHub repositories containing completed Georgia Tech Master of Science in Computer Science course work, enter your GitHub username or email address along with the specific passphrase I have shared with you. You should then receive an email invitation to join &quot;Eli-Jensen-Org.&quot;
+              To view my private GitHub repositories containing completed course work, enter your GitHub username or email address along with the specific passphrase I have shared with you. You should then receive an email invitation to join &quot;Eli-Jensen-Org.&quot;
             </h2>
             <h2 className="text-base text-justify font-semibold text-gray-800 mb-8">
               Do not request access if you are a current student or intend to apply to Georgia Tech&apos;s Master of Science in Computer Science program.
@@ -106,7 +105,7 @@ const Invite = () => {
         </div>
       </div>
 
-      {/* Add the shake and pulse animation CSS */}
+      {/* Add the pulse animation CSS */}
       <style jsx>{`
         @keyframes pulse {
           0% { opacity: 1; }

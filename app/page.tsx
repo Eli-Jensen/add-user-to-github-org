@@ -3,7 +3,7 @@
 import { redirect } from 'next/navigation';
 
 export default function HomePage() {
-  // Perform the redirection
+  // Perform redirection
   redirect('/invite');
 
   // The component can return null
