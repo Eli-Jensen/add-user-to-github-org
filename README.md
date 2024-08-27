@@ -2,7 +2,7 @@
 
 https://add-user-to-github-org.vercel.app/invite
 
-A small app allowing prospective employers (using a passphrase I have provided to you) to add themselves to my [GitHub Organization](https://github.com/Eli-Jensen-Org), giving them access to view private repos containing my completed Georgia Tech school work.
+A small app allowing prospective employers (using a passphrase which I can provide) to add themselves to my [GitHub Organization](https://github.com/Eli-Jensen-Org), giving them access to view private repos containing my completed Georgia Tech school work.
 
 Do not request access if you are currently a student at Georgia Tech or plan to enroll there.
 
