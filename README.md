@@ -9,4 +9,4 @@ Do not request access if you are currently a student at Georgia Tech or plan to 
 
 ## Technologies used
 
-* [Next.js 14](https://nextjs.org/) with TypeScript and [Tailwind] (https://tailwindcss.com/)
+* [Next.js 14](https://nextjs.org/) with TypeScript and [Tailwind](https://tailwindcss.com/)
